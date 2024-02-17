@@ -1,0 +1,21 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* // <uniquifier>: Use a uniquifier for the class name */
+  /* // <weight>: Use a value from 100 to 900 */
+  
+  .inter{
+    font-family: "Inter", sans-serif;
+  }  
+
+.raleway{
+  font-family: "Raleway", sans-serif;
+}
+.upradius{
+  border-radius: 0px 25px 25px 0px; 
+}
+.downradius{
+  border-radius: 25px 0px 0px 25px;
+}
