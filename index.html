@@ -19,7 +19,7 @@
 </head>
 
 
-<body class="container mx-auto border-2 border-red-600  min-h-screen">
+<body class="container mx-auto   min-h-screen">
     <header class="flex justify-between r p-4 container  mx-auto ">
         <h1 class="raleway  font-extrabold text-4xl text-black p-">P-Ticket</h1>
         <div class="flex justify-center   bg-[#1DD1001A] border-[#1DzD1001A] text-center ">
@@ -43,17 +43,19 @@
     </section>
     <!-- border-red-600   -->
     <main>
+        <!-- offers -->
         <section class="flex flex-col justify-center items-center   space-y-3">
             <h1 class="raleway text-5xl font-extrabold text-center mt-5">Best offers for you
             </h1>
-
             <section class="lg:flex  justify-between   lg:w-full  ">
 
                 <div class="flex lg:flex  w-full   lg:w-1/2 justify-between p-8    ">
-                    <div class="  w-1/2 justify-between bg-[#FFBF0F] p-4 upradius  ">
+                    <div class="  w-1/2 justify-between bg-[#FFBF0F] p-4  relative  ">
                         <h1 class="font-extrabold text-5xl text-black inter">15% OFF</h1>
                         <p class="font-medium text-2xl">on your next purchase</p>
                         <p class="font-medium text-2xl text-[#03071280]">use by January 2024</p>
+                        <img class="absolute bottom-0 lg:ml-[92%] ml-[55%]  h-full" src="image/cupon-devider.png"
+                            alt="">
                     </div>
                     <div class="  p-4 bg-[#FFBF0F] w-1/2 justify-between downradius  ">
                         <h1 class="font-extrabold text-2xl lg:text-5xl text-black inter text-center">NEW 15</h1>
@@ -61,12 +63,14 @@
                     </div>
                 </div>
                 <div class="flex lg:flex  w-full   lg:w-1/2 justify-between p-8  ">
-                    <div class="  bg-[#F78C9C] w-1/2 justify-between p-4 upradius  ">
+                    <div class="  bg-[#F78C9C] w-1/2 justify-between p-4 relative  ">
                         <h1 class="font-extrabold text-2xl lg:text-5xl text-black inter">20% OFF</h1>
                         <p class="font-medium text-2xl">on your next purchase</p>
                         <p class="font-medium text-2xl text-[#03071280]">use by January 2024</p>
+                        <img class="absolute bottom-0 lg:ml-[92%] ml-[55%]  h-full" src="image/cupon-devider.png"
+                            alt="">
                     </div>
-                    <div class="  bg-[#F78C9C] p-4 w-1/2 justify-between downradius  ">
+                    <div class="  bg-[#F78C9C] p-4 w-1/2 justify-between   ">
                         <h1 class="font-extrabold text-2xl lg:text-5xl text-black inter text-center">Couple 20</h1>
                         <p class="font-medium text-2xl text-[#03071280] text-center">Coupon Code</p>
                     </div>
@@ -75,9 +79,104 @@
             <button class=" btn w-40 items-center border-[#1DD100] text-[#1DD100] justify-center" type="">See All
                 Offers</button>
         </section>
+        <!-- Ticket Counter -->
+        <section class="lg:flex  bg-[#FFFFFF] p-4 ">
+            <!-- ticket body -->
+            <div class="lg:w-[50%] w-full">
+                <h1 class="text-3xl font-semibold raleway ">Select Your Seat</h1>
+                <div class="flex justify-between m-8">
+                    <div class="flex ">
+                        <img src="image/seat-gray.png" alt="">
+                        <p class="text-[#03071280] font-semibold text-lg ">Available</p>
+                    </div>
+                    <div class="flex">
+                        <img src="image/seat-green.png" alt="">
+                        <p class="text-[#03071280] font-semibold text-lg ">Selected</p>
+                    </div>
+
+                </div>
+                <div class="flex items-center  m-3">
+                    <h1 class="mr-6  text-2xl">A</h1>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">A1</button>
+                    <button class="btn lg:w-32 w-[20%] mr-4 lg:mr-24" type="">A2</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">A3</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-12" type="">A4</button>
+                </div>
+                <div class="flex items-center m-3">
+                    <h1 class="mr-6  text-2xl">B</h1>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">B1</button>
+                    <button class="btn lg:w-32 w-[20%] mr-4 lg:mr-24" type="">B2</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">B3</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-12" type="">B4</button>
+                </div>
+                <div class="flex items-center m-3">
+                    <h1 class="mr-6  text-2xl">C</h1>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">C1</button>
+                    <button class="btn lg:w-32 w-[20%] mr-4 lg:mr-24" type="">C2</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">C3</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-12" type="">C4</button>
+                </div>
+                <div class="flex items-center m-3">
+                    <h1 class="mr-6  text-2xl">D</h1>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">D1</button>
+                    <button class="btn lg:w-32 w-[20%] mr-4 lg:mr-24" type="">D2</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-6" type="">D3</button>
+                    <button class="btn lg:w-32 w-[20%] mr-1 lg:mr-12" type="">D4</button>
+                </div>
+            </div>
+            <!--ticket counter  -->
+            <div class="lg:w-[50%] w-full space-y-5">
+                <h1 class="text-3xl font-semibold raleway ">Select Your Seat</h1>
+                <div class="bg-[#F7F8F8] p-8 rounded-3xl">
+                    <div class="flex justify-between">
+                        <div>
+                            <div class="flex text-center ">
+                                <h1 class="font-bold text-xl">Seat</h1>
+                                <!-- <p class="text-[12px] bg-[#1DD100] rounded-full w-5 text-center text-white">3</p> -->
+                            </div>
+                            <h2>C2</h2>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-xl">Class</h1>
+                            <h2>Econonomy</h2>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-xl">Price</h1>
+                            <h2>500</h2>
+                        </div>
+                    </div>
+                    <div class="flex justify-between font-bold text-xl  mb-5">
+                        <h1>Total Price</h1>
+                        <h2>BDT 550</h2>
+                    </div>
+                    <div class="flex  items-center">
+                        <input class="input w-[80%]" type="text" name="" id="" placeholder="Have any copupon?">
+                        <button class="btn bg-[#1DD100] w-[20%] text-white" type="">Apply</button>
+                    </div>
+                    <div class="flex justify-between font-bold text-xl mt-5 ">
+                        <h1>Grand Total </h1>
+                        <h2>BDT 1100</h2>
+                    </div>
+
+                </div>
+                <!-- Passenger Information -->
+                <div class="p-8">
+                    <h1 class="font-bold text-xl ">Passenger Name*</h1>
+                    <input type="text" class="input w-full border-2 border-gray-100 mb-5" placeholder="Enter Your Name">
+                    <h1 class="font-bold text-xl ">Phone Number*</h1>
+                    <input type="text" class="input w-full border-2 border-gray-100 mb-5"
+                        placeholder="Enter your phone number">
+                    <h1 class="font-bold text-xl ">Email</h1>
+                    <input type="text" class="input w-full border-2 border-gray-100 mb-5"
+                        placeholder="Enter your phone Email">
+                    <button class="btn bg-[#1DD100] w-full text-white" type="">Next</button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src=" script.js">
+    </script>
 </body>
 
 </html>
