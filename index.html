@@ -85,7 +85,6 @@
                 allow for a streamlined .</p>
         </div>
         <div class="flex justify-between bg-[#F7F8F8] p-4  ">
-
             <div class=" w-[65%] mr-[5%]">
                 <!-- Deparure Part -->
 
@@ -101,7 +100,7 @@
 
                     <div class="flex text-[#1DD100] ">
                         <img src="image/seat-green-filled.png" alt="">
-                        <h1>40 Seats left</h1>
+                        <h1><span id="RemainingAvailableSeat">40</span> Seats left</h1>
                     </div>
 
                 </div>
@@ -184,23 +183,23 @@
                     <div class="flex justify-between">
                         <div class="SeletedSeatContainer">
                             <div class="flex text-center ">
-                                <h1 class="font-bold text-xl">Seat</h1>
+                                <h1 class="font-bold text-xl">Seat <span class="bg-[#1DD100] rounded-full" id="SelectedSeatUnit">0</span></h1>
                                 <!-- <p class="text-[12px] bg-[#1DD100] rounded-full w-5 text-center text-white">3</p> -->
                             </div>
-                            <h2 id="seatName">C2</h2>
+                            <h2 id="seatName " class="hidden">C2</h2>
                         </div>
-                        <div>
+                        <div class="SelectedSeatTypeContainer">
                             <h1 class="font-bold text-xl">Class</h1>
-                            <h2>Econonomy</h2>
+                            <h2 class="SelectedSeatType hidden">Econonomy</h2>
                         </div>
-                        <div>
+                        <div class="SelectedSeatPriceContainer">
                             <h1 class="font-bold text-xl">Price</h1>
-                            <h2>500</h2>
+                            <h2 class="SelectedSeatPrice hidden">550</h2>
                         </div>
                     </div>
                     <div class="flex justify-between font-bold text-xl  mb-5">
                         <h1>Total Price</h1>
-                        <h2>BDT 550</h2>
+                        <h2 class="totalFair">BDT 550</h2>
                     </div>
                     <div class="flex  items-center">
                         <input class="input w-[80%]" type="text" name="" id="" placeholder="Have any copupon?">
@@ -208,7 +207,7 @@
                     </div>
                     <div class="flex justify-between font-bold text-xl mt-5 ">
                         <h1>Grand Total </h1>
-                        <h2>BDT 1100</h2>
+                        <h2 class="totalFair">BDT 00</h2>
                     </div>
 
                 </div>
