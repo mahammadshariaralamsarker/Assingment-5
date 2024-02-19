@@ -48,6 +48,14 @@ for (let i = 0; i < buttons.length; i++) {
 var nameInput = document.getElementById('nameInput');
 var numberInput = document.getElementById('numberInput');
 var emailInput = document.getElementById('emailInput');
+nameInput.addEventListener('click', function(){
+    var submitButton = document.getElementById('submitButton');
+    submitButton.disabled = false;
+})
+numberInput.addEventListener('click', function(){
+    var submitButton = document.getElementById('submitButton');
+    submitButton.disabled = false;
+})
 
 // Find the button element
 var submitButton = document.getElementById('submitButton');
@@ -59,7 +67,7 @@ submitButton.addEventListener('click', function () {
     var inputName = nameInput.value;
     var inputNumber = numberInput.value;
     var inputEmail = emailInput.value;
-
+    
     // Perform actions with the input inputValuevalue
     if (inputName === '' || inputNumber === '' || inputEmail === '') {
         return alert('Please fill all the details');
@@ -90,8 +98,8 @@ button.addEventListener('click', function () {
         discountElement.appendChild(newH2);
         button.classList.add('hidden');
         inputField.classList.add('hidden');
-        var submitButton = document.getElementById('submitButton');
-        submitButton.disabled = false;
+        /* var submitButton = document.getElementById('submitButton');
+        submitButton.disabled = false; */
         const totalFairSpan = document.querySelector('.totalFairs');
         const value = totalFairSpan.textContent;
         const grandTotalValue = totalFair - discount;
@@ -113,8 +121,9 @@ button.addEventListener('click', function () {
         totalFairSpan.textContent = grandTotalValue;
         console.log(grandTotalValue);
     }
-    else {
-    }
+    document.getElementById("reloadButton").addEventListener("click", function() {
+        window.location.reload();
+    });
 });
 
 
