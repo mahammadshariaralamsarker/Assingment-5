@@ -60,7 +60,7 @@ submitButton.addEventListener('click', function () {
 
     // Perform actions with the input inputValuevalue
     if (inputName === '' || inputNumber === '' || inputEmail === '') {
-        alert('Please fill all the details');
+        return alert('Please fill all the details');
     }
     else {
         const modal = document.getElementById('modal');
