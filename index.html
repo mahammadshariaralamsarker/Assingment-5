@@ -237,14 +237,30 @@
             </section>
         </main>
     </section>
-    <section id="confirmation" class=" space-y-5 p-8 hidden mx-auto w-[25%] text-center border-2 border-red-600">
-        <img class="flex justify-center border-2 mt-7  ml-[44%] items-center" src="image/success.png" alt="">
-        <h1 class="text-center text-5xl font-bold text-[#27AE60] mt-4">Success</h1>
-        <p class="text-center text-2xl font-bold">Thank you for Booking Our Bus Seats.
-            We are working hard to find the best service and deals for you.
-        </p>
-        <p class="text-4xl pb-6 text-[#4A4A4A]">Shortly you will find a confirmation in your email.</p>
-    </section>
+    
+    <div id="modal">
+
+        <dialog id="my_modal_4" class="modal">
+            <div class="modal-box w-11/12 max-w-5xl">
+
+                <img class="flex justify-center border-2 mt-7  ml-[44%] items-center" src="image/success.png" alt="">
+                <h1 class="text-center text-5xl font-bold text-[#27AE60] mt-4">Success</h1>
+                <p class="text-center text-2xl font-bold">Thank you for Booking Our Bus Seats.
+                    We are working hard to find the best service and deals for you.
+                </p>
+                <p class="text-4xl pb-6 text-center text-[#4A4A4A]">Shortly you will find a confirmation in your email.
+                </p>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button, it will close the modal -->
+
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </div>
     <script src=" script.js">
     </script>
 </body>

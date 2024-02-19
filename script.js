@@ -1,10 +1,11 @@
 let totalSelectedSeat = 0;
 var buttons = document.getElementsByClassName("add-btn");
-
-
-
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
+        if (totalSelectedSeat > 3) {
+
+            return alert('You Cannot Select More Than 4');;
+        }
         buttons[i].disabled = true;
         buttons[i].style.backgroundColor = "#1DD100";
         const ticketName = this.innerText;
@@ -37,12 +38,7 @@ for (let i = 0; i < buttons.length; i++) {
         const totalFairContainer = document.querySelector('.totalFair');
         totalFairContainer.innerText = totalFair;
 
-        // Add click event listener to the button
 
-        if (totalSelectedSeat > 4) {
-
-            return alert('You Cannot Select More Than 4');;
-        }
 
 
     });
@@ -67,10 +63,7 @@ submitButton.addEventListener('click', function () {
         alert('Please fill all the details');
     }
     else {
-        const body = document.getElementById('body');
-        body.classList.add('hidden');
-        const confirm = document.getElementById('confirmation');
-        confirm.classList.remove('hidden');
+        const modal = document.getElementById('modal');
     }
 });
 var button = document.getElementById('myButton');
