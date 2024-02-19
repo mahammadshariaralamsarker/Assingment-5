@@ -14,3 +14,7 @@
 .color{
   background-color: red;
 }
+.button-clicked {
+  background-color: green; /* Change to your desired color */
+  color: white; /* Text color */
+}
