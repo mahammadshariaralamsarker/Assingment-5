@@ -4,6 +4,9 @@ const inputField = document.getElementById('couponInputText');
 inputField.disabled = true;
 var submitButton = document.getElementById('submitButton');
 submitButton.disabled = true;
+document.getElementById("scrollBtn").addEventListener("click", function() {
+    document.getElementById("ticketCounter").scrollIntoView({behavior: "smooth"});
+});
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
@@ -121,9 +124,10 @@ button.addEventListener('click', function () {
         totalFairSpan.textContent = grandTotalValue;
         console.log(grandTotalValue);
     }
-    document.getElementById("reloadButton").addEventListener("click", function() {
-        window.location.reload();
-    });
+    
 });
+function reloadWindow() {
+    window.location.reload();
+}
 
 
