@@ -1,11 +1,11 @@
 let totalSelectedSeat = 0;
-var buttons = document.getElementsByClassName("add-btn");
+const buttons = document.getElementsByClassName("add-btn");
 const inputField = document.getElementById('couponInputText');
 inputField.disabled = true;
-var submitButton = document.getElementById('submitButton');
+const submitButton = document.getElementById('submitButton');
 submitButton.disabled = true;
-document.getElementById("scrollBtn").addEventListener("click", function() {
-    document.getElementById("ticketCounter").scrollIntoView({behavior: "smooth"});
+document.getElementById("scrollBtn").addEventListener("click", function () {
+    document.getElementById("ticketCounter").scrollIntoView({ behavior: "smooth" });
 });
 
 for (let i = 0; i < buttons.length; i++) {
@@ -48,29 +48,29 @@ for (let i = 0; i < buttons.length; i++) {
         totalFairContainer.innerText = totalFair;
     });
 }
-var nameInput = document.getElementById('nameInput');
-var numberInput = document.getElementById('numberInput');
-var emailInput = document.getElementById('emailInput');
-nameInput.addEventListener('click', function(){
-    var submitButton = document.getElementById('submitButton');
+const nameInput = document.getElementById('nameInput');
+const numberInput = document.getElementById('numberInput');
+const emailInput = document.getElementById('emailInput');
+nameInput.addEventListener('click', function () {
+    const submitButton = document.getElementById('submitButton');
     submitButton.disabled = false;
 })
-numberInput.addEventListener('click', function(){
-    var submitButton = document.getElementById('submitButton');
+numberInput.addEventListener('click', function () {
+    const submitButton = document.getElementById('submitButton');
     submitButton.disabled = false;
 })
 
 // Find the button element
-var submitButton = document.getElementById('submitButton');
+const submitButton = document.getElementById('submitButton');
 
 // Add click event listener to the button
 submitButton.addEventListener('click', function () {
 
     // Get the value from the input field
-    var inputName = nameInput.value;
-    var inputNumber = numberInput.value;
-    var inputEmail = emailInput.value;
-    
+    const inputName = nameInput.value;
+    const inputNumber = numberInput.value;
+    const inputEmail = emailInput.value;
+
     // Perform actions with the input inputValuevalue
     if (inputName === '' || inputNumber === '' || inputEmail === '') {
         return alert('Please fill all the details');
@@ -81,7 +81,7 @@ submitButton.addEventListener('click', function () {
         modal.showModal();
     }
 });
-var button = document.getElementById('myButton');
+const button = document.getElementById('myButton');
 button.addEventListener('click', function () {
     const couponInputText = this.innerText;
     const inputField = document.getElementById('couponInputText');
@@ -89,19 +89,19 @@ button.addEventListener('click', function () {
     inputField.disabled = false;
     const couponValues = inputField.value;
     const couponValuess = couponValues.trim();
-    var couponValue = couponValuess.toUpperCase();
+    const couponValue = couponValuess.toUpperCase();
     console.log(couponValue);
     if (couponValue === "NEW 15") {
         console.log(totalFair);
         const discount = totalFair * 0.15;
         console.log(discount);
-        var newH2 = document.createElement('h2');
+        const newH2 = document.createElement('h2');
         newH2.textContent = discount;
-        var discountElement = document.getElementById('discount');
+        const discountElement = document.getElementById('discount');
         discountElement.appendChild(newH2);
         button.classList.add('hidden');
         inputField.classList.add('hidden');
-        /* var submitButton = document.getElementById('submitButton');
+        /* const submitButton = document.getElementById('submitButton');
         submitButton.disabled = false; */
         const totalFairSpan = document.querySelector('.totalFairs');
         const value = totalFairSpan.textContent;
@@ -112,9 +112,9 @@ button.addEventListener('click', function () {
     else if (couponValue === "COUPLE 20") {
         const discount = totalFair * 0.2;
         console.log(discount);
-        var newH2 = document.createElement('h2');
+        const newH2 = document.createElement('h2');
         newH2.textContent = discount;
-        var discountElement = document.getElementById('discount');
+        const discountElement = document.getElementById('discount');
         discountElement.appendChild(newH2);
         button.classList.add('hidden');
         inputField.classList.add('hidden');
@@ -124,7 +124,7 @@ button.addEventListener('click', function () {
         totalFairSpan.textContent = grandTotalValue;
         console.log(grandTotalValue);
     }
-    
+
 });
 function reloadWindow() {
     window.location.reload();
