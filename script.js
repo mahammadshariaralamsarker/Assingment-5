@@ -1,10 +1,17 @@
 let totalSelectedSeat = 0;
 var buttons = document.getElementsByClassName("add-btn");
+const inputField = document.getElementById('couponInputText');
+inputField.disabled = true;
+var submitButton = document.getElementById('submitButton');
+submitButton.disabled = true;
+
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
         if (totalSelectedSeat > 3) {
             return alert('You Cannot Select More Than 4');;
         }
+        const inputField = document.getElementById('couponInputText');
+        inputField.disabled = false;
         buttons[i].disabled = true;
         buttons[i].style.backgroundColor = "#1DD100";
         const ticketName = this.innerText;
@@ -47,6 +54,7 @@ var submitButton = document.getElementById('submitButton');
 
 // Add click event listener to the button
 submitButton.addEventListener('click', function () {
+
     // Get the value from the input field
     var inputName = nameInput.value;
     var inputNumber = numberInput.value;
@@ -57,6 +65,7 @@ submitButton.addEventListener('click', function () {
         return alert('Please fill all the details');
     }
     else {
+
         const modal = document.getElementById('my_modal_1');
         modal.showModal();
     }
@@ -65,6 +74,8 @@ var button = document.getElementById('myButton');
 button.addEventListener('click', function () {
     const couponInputText = this.innerText;
     const inputField = document.getElementById('couponInputText');
+    // console.log(inputField.value);
+    inputField.disabled = false;
     const couponValues = inputField.value;
     const couponValuess = couponValues.trim();
     var couponValue = couponValuess.toUpperCase();
@@ -79,6 +90,8 @@ button.addEventListener('click', function () {
         discountElement.appendChild(newH2);
         button.classList.add('hidden');
         inputField.classList.add('hidden');
+        var submitButton = document.getElementById('submitButton');
+        submitButton.disabled = false;
         const totalFairSpan = document.querySelector('.totalFairs');
         const value = totalFairSpan.textContent;
         const grandTotalValue = totalFair - discount;
@@ -86,7 +99,6 @@ button.addEventListener('click', function () {
         console.log(grandTotalValue);
     }
     else if (couponValue === "COUPLE 20") {
-        // console.log(totalFair);
         const discount = totalFair * 0.2;
         console.log(discount);
         var newH2 = document.createElement('h2');
@@ -102,7 +114,6 @@ button.addEventListener('click', function () {
         console.log(grandTotalValue);
     }
     else {
-        // console.log('Your coupon is not valid');
     }
 });
 
