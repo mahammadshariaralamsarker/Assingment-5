@@ -3,7 +3,6 @@ var buttons = document.getElementsByClassName("add-btn");
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
         if (totalSelectedSeat > 3) {
-
             return alert('You Cannot Select More Than 4');;
         }
         buttons[i].disabled = true;
@@ -37,12 +36,7 @@ for (let i = 0; i < buttons.length; i++) {
 
         const totalFairContainer = document.querySelector('.totalFair');
         totalFairContainer.innerText = totalFair;
-
-
-
-
     });
-
 }
 var nameInput = document.getElementById('nameInput');
 var numberInput = document.getElementById('numberInput');
@@ -63,7 +57,8 @@ submitButton.addEventListener('click', function () {
         return alert('Please fill all the details');
     }
     else {
-        const modal = document.getElementById('modal');
+        const modal = document.getElementById('my_modal_1');
+        modal.showModal();
     }
 });
 var button = document.getElementById('myButton');
@@ -89,7 +84,6 @@ button.addEventListener('click', function () {
         const grandTotalValue = totalFair - discount;
         totalFairSpan.textContent = grandTotalValue;
         console.log(grandTotalValue);
-
     }
     else if (couponValue === "COUPLE 20") {
         // console.log(totalFair);
@@ -106,13 +100,10 @@ button.addEventListener('click', function () {
         const grandTotalValue = totalFair - discount;
         totalFairSpan.textContent = grandTotalValue;
         console.log(grandTotalValue);
-
     }
     else {
-        console.log('Your coupon is not valid');
+        // console.log('Your coupon is not valid');
     }
-
-
 });
 
 
